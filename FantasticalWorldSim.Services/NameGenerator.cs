@@ -3,7 +3,7 @@ using RandomNameGeneratorLibrary;
 
 namespace FantasticalWorldSim.Services
 {
-    public class NameGenerator
+    public class NameGenerator : INameGenerator
     {
         private readonly Mudless.NameGenerator.NameGenerator fantasyNameGenerator;
         private readonly PersonNameGenerator realNameGenerator;
@@ -16,9 +16,9 @@ namespace FantasticalWorldSim.Services
             this.randomizer = new Random();
 
         }
-        public string GenerateFirstName(Gender? gender = null, bool? isRealName = null)
+        public string GenerateFirstName(Gender? gender = null, bool? useRealName = null)
         {
-            var getRealPerson = this.randomizer.NextBool();
+            var getRealPerson = useRealName ?? this.randomizer.NextBool();
             var nameGender = gender ?? (this.randomizer.NextBool() ? Gender.Male : Gender.Female);
 
             if (!getRealPerson)
@@ -32,6 +32,20 @@ namespace FantasticalWorldSim.Services
             else
             {
                 return this.realNameGenerator.GenerateRandomFemaleFirstName();
+            }
+        }
+
+        public string GenerateLastName(bool? useRealName)
+        {
+            var getRealPerson = useRealName ?? this.randomizer.NextBool();
+
+            if (!getRealPerson)
+            {
+                return this.fantasyNameGenerator.Generate();
+            }
+            else
+            {
+                return this.realNameGenerator.GenerateRandomLastName();
             }
         }
     }

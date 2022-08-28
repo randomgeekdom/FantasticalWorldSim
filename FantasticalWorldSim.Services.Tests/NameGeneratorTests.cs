@@ -14,9 +14,19 @@ namespace FantasticalWorldSim.Services.Tests
         [InlineData(null, false)]
         [InlineData(Gender.Male, false)]
         [InlineData(Gender.Female, false)]
-        public void Test1(Gender? gender, bool? useRealName)
+        public void GenerateFirstNameGeneratesFirstName(Gender? gender, bool? useRealName)
         {
             var name = sut.GenerateFirstName(gender, useRealName);
+            Assert.NotNull(name);
+        }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void GenerateLastNameGeneratesLastName(bool? useRealName)
+        {
+            var name = sut.GenerateLastName(useRealName);
             Assert.NotNull(name);
         }
     }
