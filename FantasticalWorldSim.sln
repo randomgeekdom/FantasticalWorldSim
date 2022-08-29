@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasticalWorldSim.Model", "FantasticalWorldSim.Model\FantasticalWorldSim.Model.csproj", "{DF0540DD-27F4-44EE-ADD1-F40AD99AB333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasticalWorldSim.Model", "FantasticalWorldSim.Model\FantasticalWorldSim.Model.csproj", "{DF0540DD-27F4-44EE-ADD1-F40AD99AB333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasticalWorldSim.Services", "FantasticalWorldSim.Services\FantasticalWorldSim.Services.csproj", "{FE6174FC-3A09-4812-90E3-65E72C8BF50D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasticalWorldSim.Services", "FantasticalWorldSim.Services\FantasticalWorldSim.Services.csproj", "{FE6174FC-3A09-4812-90E3-65E72C8BF50D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasticalWorldSim.Services.Tests", "FantasticalWorldSim.Services.Tests\FantasticalWorldSim.Services.Tests.csproj", "{C6DF8146-2157-4B3C-8518-78BDFC09E1A8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldRunner", "WorldRunner\WorldRunner.csproj", "{697DF63C-509F-4139-8050-682CE0CE78B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasticalWorldSim.Services.Tests", "FantasticalWorldSim.Services.Tests\FantasticalWorldSim.Services.Tests.csproj", "{C6DF8146-2157-4B3C-8518-78BDFC09E1A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{C6DF8146-2157-4B3C-8518-78BDFC09E1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DF8146-2157-4B3C-8518-78BDFC09E1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6DF8146-2157-4B3C-8518-78BDFC09E1A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{697DF63C-509F-4139-8050-682CE0CE78B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{697DF63C-509F-4139-8050-682CE0CE78B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{697DF63C-509F-4139-8050-682CE0CE78B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{697DF63C-509F-4139-8050-682CE0CE78B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
