@@ -7,7 +7,9 @@ using Microsoft.Extensions.Hosting;
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>
         services
-            .AddTransient<INameGenerator, NameGenerator>())
+            .AddTransient<INameGenerator, NameGenerator>()
+            .AddTransient<IRandomizer, Randomizer>()
+            .AddTransient<IPersonGenerator, PersonGenerator>())
     .Build();
 
 

@@ -11,4 +11,8 @@
     <PackageReference Include="RandomNameGeneratorLibrary" Version="1.2.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FantasticalWorldSim.Model\FantasticalWorldSim.Model.csproj" />
+  </ItemGroup>
+
 </Project>
