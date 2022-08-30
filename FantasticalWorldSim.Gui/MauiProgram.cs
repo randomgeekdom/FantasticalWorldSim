@@ -22,7 +22,6 @@ namespace FantasticalWorldSim.Gui
             builder.Services.AddTransient<IRandomizer, Randomizer>();
             builder.Services.AddTransient<INameGenerator, NameGenerator>();
             builder.Services.AddTransient<IPersonGenerator, PersonGenerator>();
-            builder.Services.AddTransient<IInteractionService, RandomInteractionService>();
 
             builder.Services.AddTransient<AppShell>();
             builder.Services.AddTransient<MainPage>();

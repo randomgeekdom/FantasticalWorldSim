@@ -12,15 +12,13 @@ namespace FantasticalWorldSim.Services.Tests
         private PersonGenerator sut;
         private Mock<INameGenerator> nameGenerator;
         private Mock<IRandomizer> randomizer;
-        private Mock<IInteractionService> interactionService;
 
         public PersonGeneratorTests()
         {
             nameGenerator = new Mock<INameGenerator>();
             randomizer = new Mock<IRandomizer>();
-            interactionService = new Mock<IInteractionService>();
 
-            sut = new PersonGenerator(nameGenerator.Object, randomizer.Object, interactionService.Object);
+            sut = new PersonGenerator(nameGenerator.Object, randomizer.Object);
         }
 
         [Fact]
@@ -32,7 +30,7 @@ namespace FantasticalWorldSim.Services.Tests
 
             this.nameGenerator.Setup(x => x.GenerateFirstName(It.IsAny<Gender?>(), It.IsAny<bool?>())).Returns(firstName);
             this.nameGenerator.Setup(x => x.GenerateLastName(It.IsAny<bool?>())).Returns(lastName);
-            this.interactionService.Setup(x => x.GetOption<Gender>(It.IsAny<string>(), It.IsAny<Gender[]>())).Returns(gender);
+            this.randomizer.Setup(x => x.GetRandomGender()).Returns(gender);
 
             var person = this.sut.BirthPerson();
 

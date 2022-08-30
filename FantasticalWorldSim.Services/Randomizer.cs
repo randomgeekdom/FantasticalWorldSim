@@ -14,9 +14,9 @@ namespace FantasticalWorldSim.Services
             return random.Next() % 2 == 0;
         }
 
-        public T GetRandomElement<T>(IEnumerable<T> args)
+        public Gender GetRandomGender()
         {
-            return args.ElementAt(random.Next(0, args.Count()));
+            return this.GetRandomBool() ? Gender.Male : Gender.Female;
         }
     }
 }
