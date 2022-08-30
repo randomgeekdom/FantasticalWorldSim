@@ -2,7 +2,7 @@
 {
     public interface IRandomizer
     {
-        bool GetRandomBool(); 
-        Gender GetRandomGender();
+        bool GetRandomBool();
+        T GetRandomElement<T>(IEnumerable<T> args);
     }
 }

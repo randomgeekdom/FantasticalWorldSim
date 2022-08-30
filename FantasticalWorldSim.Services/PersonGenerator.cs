@@ -11,20 +11,22 @@ namespace FantasticalWorldSim.Services
     {
         private readonly INameGenerator nameGenerator;
         private readonly IRandomizer randomizer;
+        private readonly IInteractionService interactionService;
 
-        public PersonGenerator(INameGenerator nameGenerator, IRandomizer randomizer)
+        public PersonGenerator(INameGenerator nameGenerator, IRandomizer randomizer, IInteractionService interactionService)
         {
             this.nameGenerator = nameGenerator;
             this.randomizer = randomizer;
+            this.interactionService = interactionService;
         }
 
         public Person BirthPerson()
         {
-            var gender = this.randomizer.GetRandomGender();
+            var gender = this.interactionService.GetOption("Gender", Gender.Male, Gender.Female) ;
             return new Person
             {
-                FirstName = nameGenerator.GenerateFirstName(gender),
-                LastName = nameGenerator.GenerateLastName(),
+                FirstName = this.interactionService.GetText("First Name") ?? nameGenerator.GenerateFirstName(gender),
+                LastName = this.interactionService.GetText("Last Name") ?? nameGenerator.GenerateLastName(),
                 Gender = gender,
             };
         }
