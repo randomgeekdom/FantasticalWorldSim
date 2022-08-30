@@ -18,9 +18,13 @@ namespace FantasticalWorldSim.Gui
 
             builder.Services.AddTransient<IFileSaver, FileSaver>();
 
+
             builder.Services.AddTransient<IRandomizer, Randomizer>();
             builder.Services.AddTransient<INameGenerator, NameGenerator>();
             builder.Services.AddTransient<IPersonGenerator, PersonGenerator>();
+
+            builder.Services.AddTransient<AppShell>();
+            builder.Services.AddTransient<MainPage>();
 
             return builder.Build();
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FantasticalWorldSim.Model;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +12,23 @@ namespace FantasticalWorldSim.Gui.Services
     {
         private readonly string file = Path.Combine(FileSystem.Current.AppDataDirectory, "world.world");
 
-        public string ReadTextFile()
+        public World ReadWorld()
         {
-            return File.ReadAllText(file);
+            if (File.Exists(file))
+            {
+                return JsonConvert.DeserializeObject<World>(File.ReadAllText(file));
+            }
+            else
+            {
+                var world = new World();
+                this.WriteWorld(world);
+                return world;
+            }
         }
 
-        public void WriteTextFile(string text)
+        public void WriteWorld(World world)
         {
-            File.WriteAllText(file, text);
+            File.WriteAllText(file, JsonConvert.SerializeObject(world));
         }
     }
 }

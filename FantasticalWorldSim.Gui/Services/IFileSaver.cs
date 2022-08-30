@@ -1,8 +1,10 @@
-﻿namespace FantasticalWorldSim.Gui.Services
+﻿using FantasticalWorldSim.Model;
+
+namespace FantasticalWorldSim.Gui.Services
 {
     public interface IFileSaver
     {
-        string ReadTextFile();
-        void WriteTextFile(string text);
+        World ReadWorld();
+        void WriteWorld(World world);
     }
 }

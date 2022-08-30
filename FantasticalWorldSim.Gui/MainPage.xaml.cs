@@ -1,4 +1,5 @@
 ﻿using FantasticalWorldSim.Gui.Services;
+using FantasticalWorldSim.Model;
 
 namespace FantasticalWorldSim.Gui
 {
@@ -6,8 +7,11 @@ namespace FantasticalWorldSim.Gui
     {
         int count = 0;
 
-        public MainPage()
+        public World World { get; }
+
+        public MainPage(IFileSaver fileSaver)
         {
+            this.World = fileSaver.ReadWorld();
             InitializeComponent();
         }
 
@@ -26,8 +30,8 @@ namespace FantasticalWorldSim.Gui
         private void Button_Clicked(object sender, EventArgs e)
         {
             FileSaver fileSaver = new FileSaver();
-            fileSaver.WriteTextFile("Hello my name is blah");
-            var result = fileSaver.ReadTextFile();
+            fileSaver.WriteWorld(this.World);
+            var result = fileSaver.ReadWorld();
         }
     }
 }

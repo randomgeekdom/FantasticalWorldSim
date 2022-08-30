@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\FantasticalWorldSim.Model\FantasticalWorldSim.Model.csproj" />
 	  <ProjectReference Include="..\FantasticalWorldSim.Services\FantasticalWorldSim.Services.csproj" />
 	</ItemGroup>
