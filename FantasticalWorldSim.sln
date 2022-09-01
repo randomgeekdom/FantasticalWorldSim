@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasticalWorldSim.Service
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasticalWorldSim.Services.Tests", "FantasticalWorldSim.Services.Tests\FantasticalWorldSim.Services.Tests.csproj", "{C6DF8146-2157-4B3C-8518-78BDFC09E1A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasticalWorldSim.Gui", "FantasticalWorldSim.Gui\FantasticalWorldSim.Gui.csproj", "{960B101B-884C-43F7-A0A5-8E317BBEBE78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasticalWorldSim.Gui", "FantasticalWorldSim.Gui\FantasticalWorldSim.Gui.csproj", "{960B101B-884C-43F7-A0A5-8E317BBEBE78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF90E9A4-6D45-43D9-9B84-75B6EEBC30E2}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
