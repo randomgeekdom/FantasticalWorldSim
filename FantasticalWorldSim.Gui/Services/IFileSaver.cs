@@ -1,4 +1,4 @@
-﻿using FantasticalWorldSim.Model;
+﻿using FantasticalWorldSim.Model.Geography;
 
 namespace FantasticalWorldSim.Gui.Services
 {

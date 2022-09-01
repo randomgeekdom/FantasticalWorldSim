@@ -1,4 +1,4 @@
-﻿using FantasticalWorldSim.Model;
+﻿using FantasticalWorldSim.Model.Geography;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

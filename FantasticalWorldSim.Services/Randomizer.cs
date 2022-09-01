@@ -14,9 +14,19 @@ namespace FantasticalWorldSim.Services
             return random.Next() % 2 == 0;
         }
 
+        public T GetRandomElement<T>(IEnumerable<T> set)
+        {
+            return set.OrderBy(x => Guid.NewGuid()).First();
+        }
+
         public Gender GetRandomGender()
         {
             return this.GetRandomBool() ? Gender.Male : Gender.Female;
+        }
+
+        public int GetRandomInteger(int min, int max)
+        {
+            return random.Next(min, max);
         }
     }
 }

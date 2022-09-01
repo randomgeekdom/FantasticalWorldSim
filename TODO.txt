@@ -1,0 +1,7 @@
+RegionGenerator
+	Inject
+	unit tests
+
+City Generator - Start
+
+Bind "World" to MainPage component
